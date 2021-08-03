@@ -79,6 +79,7 @@ body {
 	margin: 5px 0;
 	border: none;
 	border-radius: 5px;
+	text-transform: uppercase;
 }
 .btn:hover {
 	transform: scale(0.98);
@@ -138,7 +139,7 @@ body {
 	color: #fff;
 	width: 80%;
 }
-.showcase-text h1, .showcase-text a {
+.showcase-text h1 {
 	text-transform: uppercase;
 }
 .showcase-text h1 {
@@ -177,13 +178,13 @@ body {
 	font-size: 64px;
 	margin: 20px;
 }
-.fa-calendar-alt {
+.tools-card .fa-calendar-alt {
 	color: var(--purplish-blue-color);
 }
-.fa-users {
+.tools-card .fa-users {
 	color: var(--very-light-blue-color);
 }
-.fa-envelope {
+.tools-card .fa-envelope {
 	color: var(--heliotrope-color);
 }
 .our-tools .container .secondary-text {
@@ -223,7 +224,54 @@ body {
 
 /* services section */
 .services {
-	
+	padding: 20px 0;
 }
+.services .container .secondary-text {
+	max-width: 500px;
+	margin: 10px auto;
+}
+
+
+.services-offers {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 40px;
+}
+.services-offers-card {
+	padding: 10px 0;
+}
+.services-offers-card .collapsible {
+	/* font */
+	border-radius: 5px;
+	border: none;
+	width: 100%;
+	color: #000;
+	background-color: transparent;
+	box-shadow: 2px 2px 5px #949494;
+	padding: 20px 15px;
+	text-align: left;
+	font-size: 1.1rem;
+}
+.services-offers-card .collapsible i {
+	margin-right: 10px;
+}
+.services-offers-card .active {
+	/* box-shadow: -2px -2px 5px #949494; */
+}
+.services-offers-card .content {
+	box-shadow: 2px 2px 5px #949494;
+	padding: 20px 15px;
+	display: none;
+	border-radius: 5px;
+}
+
+/* reviews section */
+.reviews {
+	background: url('../img/bg-reviews.png') center no-repeat;
+	background-size: cover;
+}
+
+
+
 
 
