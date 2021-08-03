@@ -269,9 +269,45 @@ body {
 .reviews {
 	background: url('../img/bg-reviews.png') center no-repeat;
 	background-size: cover;
+	color: #fff;
+	padding: 50px 0;
 }
-
-
-
+.reviews-text h2 {
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+.reviews-text p {
+	padding: 20px 0;
+	max-width: 600px;
+	line-height: 2;
+}
+.reviews-btns {
+	text-align: center;
+	padding: 10px;
+}
+.reviews-btns a {
+	padding: 10px;
+}
+.reviews-btns a:hover {
+	color: var(--dark-vivid-cyan-color);
+}
+.reviews-card {
+	text-align: center;
+	margin: 5px;
+}
+.reviews-card img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+.reviews-card h3 {
+	margin: 5px 0 10px 0;
+}
+.reviews-card p {
+	/* display: inline-block; */
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
 
 
