@@ -372,10 +372,7 @@ body {
 	height: 130px;
 	outline: none;
 }
-#fName {
-	margin-right: 15px;
-}
-#email {
+#fName, #email {
 	margin-right: 15px;
 }
 .form-bottom.flex {
@@ -384,6 +381,23 @@ body {
 }
 .form-bottom label {
 	font-size: 0.9rem;
+}
+
+/* footer section */
+.footer {
+	background-color: var(--dark-vivid-cyan-color);
+	padding: 50px 0;
+}
+.footer .flex {
+	justify-content: space-between;
+}
+.footer .nav a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+.footer .social-media {
+	justify-content: flex-end;
+	padding: 10px 0;
 }
 
 
