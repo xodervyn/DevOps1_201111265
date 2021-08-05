@@ -338,17 +338,23 @@
 
 
 	<script type="text/javascript">
-		/* todo: make a slide animation */
-
 		/* services cards */
 		let coll = document.getElementsByClassName('collapsible');
 		for (let i = 0; i < coll.length; i++) {
 			coll[i].addEventListener('click', function() {
 				let content = this.nextElementSibling;
 				if (content.style.display === 'block') {
-					content.style.display = 'none';
+					content.style.opacity = 0;
+				    content.style.transform = 'scale(0)';
+				    window.setTimeout(function() {
+				    	content.style.display = 'none';
+				    }, 400);
 				} else {
 					content.style.display = 'block';
+					window.setTimeout(function() {
+						content.style.opacity = 1;
+						content.style.transform = 'scale(1)';
+					}, 0);
 				}
 			});
 		}
@@ -358,7 +364,8 @@
 		let image_1 = document.getElementById('id_team_1');
 		let image_2 = document.getElementById('id_team_2');
 		let image_3 = document.getElementById('id_team_3');
-
+		// let team = document.getElementsByClassName('choose');
+		// console.log(team);
 		let teamContent = document.getElementsByClassName('team-content');
 
 		teamContent[0].style.display = 'none';
@@ -417,8 +424,6 @@
 		function validationPhone() {
 			// body...
 		}
-
-		// let image = document.getElementsByClassName('choose');
 
 		/* review carousel */
 		let slideIndex = 1;
