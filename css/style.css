@@ -458,7 +458,8 @@ body {
 	}
 }
 
-@media(max-width: 500px) {
+
+@media(max-width: 547px) {
 	.our-tools .grid-3 {
 		grid-template-columns: 1fr;
 	}
@@ -466,8 +467,17 @@ body {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+	.logo {
+		text-align: center;
+	}
+	.nav ul {
+		flex-direction: column;
+		text-align: center;
+	}
+	.nav>.social-media {
+		flex-direction: row;
+	}
 }
-
 
 
 
