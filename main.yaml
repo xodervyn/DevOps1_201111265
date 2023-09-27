@@ -1,47 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+name: My Responsive Website Template
+on:
+  push:
+    branches:
+      - main
 
-	<title>Dart Service Manager</title>
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-	<link rel="shortcut icon" href="img/darts-icon.png" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-</head>
-<body>
-	<div class="header">
-		<div class="navbar container flex">
-			<div class="logo">
-				<img src="img/darts-logo.png" alt="">
-				Dart Service Manager
-			</div>
-			<div class="nav">
-				<ul>
-					<li><a href="#" title="Home">Home</a></li>
-					<li><a href="#" title="Service">Service</a></li>
-					<li><a href="#" title="Extension">Extension</a></li>
-					<li><a href="#" title="Pricing">Pricing</a></li>
-					<li><a href="#" title="Help">Help</a></li>
-				</ul>
-			</div>
-			<a href="#" class="btn btn-light">Sign up</a>
-		</div>
-		<div class="showcase container grid">
-			<div class="showcase-text">
-				<h1>
-					Lorem ipsum dolor sit amet
-				</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco
-				</p>
-				<a href="#" class="btn">Buy now</a>
-				<a href="#" class="btn btn-light">Try for free</a>
-			</div>
-			<div class="showcase-video">
-				<img src="img/head-video.png">
-			</div>
-		</div>
-	</div>
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build Website
+        run: |
+          npm install
+	  npm run build
+          gem install jekyll
+    	# Build situs web menggunakan Jekyll
+    	jekyll build
+     	./custom-build-script.sh
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./xodervyn/DevOps1_201111265
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
